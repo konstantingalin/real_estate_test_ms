@@ -1,0 +1,189 @@
+._1 {
+  @include adaptive(padding-bottom, 20, 176);
+  background: #1E2030;
+
+  .top_navigation_wrap {
+    background: #2C2E3E;
+  }
+
+  .top_navigation {
+    display: flex;
+    align-items: center;
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 15px 16px;
+
+    &__item {
+
+      &:first-child {
+        @include adaptive(margin-right, 12, 175);
+        margin-left: 0;
+      }
+
+      &:nth-child(2) {
+        margin-right: 12px;
+      }
+
+      &:last-child {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .nav_list {
+        display: flex;
+
+        li {
+          @include adaptive(margin-right, 12, 106);
+
+          a {
+            font-style: normal;
+            font-weight: 700;
+            font-size: var(--fz16);
+            line-height: var(--fz20);
+            color: var(--clr-white);
+          }
+
+          &:first-child {
+            @include adaptive(margin-right, 12, 85);
+
+            a {
+              display: inline-block;
+              padding-right: 24px;
+              background: url(../../public/arrow_icon.svg) center right no-repeat;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .open_menu {
+            display: none;
+          }
+        }
+      }
+
+      .button {
+        @include adaptive(padding, 16, 42);
+        @include adaptive(padding-top, 10, 14);
+        @include adaptive(padding-bottom, 12, 16);
+        background: #FF0C00;
+        border-radius: 32.5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--fz16);
+        line-height: var(--fz20);
+        color: var(--clr-white);
+
+        &:hover {
+          box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
+        }
+      }
+    }
+  }
+
+  .main_content {
+    max-width: 1220px;
+    margin: 0 auto;
+    @include adaptive(margin-top, 20, 120);
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      width: 60%;
+      @include adaptive(margin-right, 0, 32);
+      @include adaptive(padding-top, 0, 32);
+
+      .main_text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--fz48);
+        line-height: var(--fz55);
+        color: #FFFFFF;
+        max-width: 520px;
+        @include adaptive(margin-bottom, 16, 46);
+      }
+
+      .form {
+        &__inputs {
+          display: flex;
+          justify-content: space-between;
+          max-width: 720px;
+          @include adaptive(margin-bottom, 16, 40);
+
+          &__item {
+            width: 50%;
+
+            &:first-child {
+              @include adaptive(margin-right, 12, 30);
+            }
+
+            label {
+              display: block;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 25px;
+              color: #8F95AC;
+              @include adaptive(margin-bottom, 4, 6);
+            }
+
+            input, select {
+              @include adaptive(padding, 16, 21);
+              @include adaptive(padding-right, 16, 25);
+              @include adaptive(padding-bottom, 16, 26);
+              outline: none;
+              width: 100%;
+              background: none;
+              border: 1px solid #8F95AC;
+              border-radius: 4px;
+
+              font-style: normal;
+              font-weight: 400;
+              font-size: var(--fz14);
+              line-height: var(--fz18);
+              color: #FFFFFF;
+
+              &::placeholder {
+                font-style: normal;
+                font-weight: 400;
+                font-size: var(--fz14);
+                line-height: var(--fz18);
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+        .button {
+          outline: none;
+          font-weight: 700;
+          font-size: var(--fz16);
+          line-height: var(--fz20);
+          color: var(--clr-white);
+          @include adaptive(padding, 16, 38);
+          @include adaptive(padding-top, 10, 19);
+          @include adaptive(padding-bottom, 12, 21);
+          background: #FF0C00;
+          border-radius: 32.5px;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
+          }
+        }
+      }
+    }
+
+    &__right {
+      width: 40%;
+
+      img {
+        margin-left: auto;
+      }
+    }
+  }
+  
+  @media (max-width: 500px) {
+   
+  }
+}
