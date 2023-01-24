@@ -5,5 +5,4 @@ if (process.env.NODE_ENV === 'development') {
 
 window.addEventListener('DOMContentLoaded', function () {
 	'use strict';
-	
 });
