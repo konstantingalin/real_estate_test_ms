@@ -73,4 +73,67 @@ window.addEventListener('DOMContentLoaded', function () {
 			accordion_button.classList.add('active');
 		}
 	})
+
+
+	// Carousel
+
+	$('.owl-carousel').owlCarousel({
+		items: 3,
+		loop:true,
+		margin:30,
+		nav:true,
+		navText: "",
+		responsive:{
+			// 600:{
+			// 	items:2.8
+			// }
+		}
+	});
+
+	// Map
+
+	let center = [59.9288941270315,30.347148755294757];
+
+	function init() {
+		let map = new ymaps.Map('map-test', {
+			center: center,
+			zoom: 17
+		});
+
+		let placemark = new ymaps.Placemark(center, {
+			balloonContent: `
+				<div class="ballon">
+					<p class='text1'>
+						Наш адрес
+					</p>
+					<p class='text2'>
+						Санкт-Петербург, Владимирский проспект, 23, лит. А, офис 701
+					</p>
+					<a href="#_4" class='link'>
+						Схема проезда
+					</a>
+				</div>
+			`
+		}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
+			iconImageSize: [40, 40],
+			iconImageOffset: [-19, -44]
+		});
+	
+		map.controls.remove('geolocationControl'); // удаляем геолокацию
+		map.controls.remove('searchControl'); // удаляем поиск
+		map.controls.remove('trafficControl'); // удаляем контроль трафика
+		map.controls.remove('typeSelector'); // удаляем тип
+		map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+		//map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+		map.controls.remove('rulerControl'); // удаляем контрол правил
+		// map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+	
+		map.geoObjects.add(placemark);
+
+		placemark.balloon.open();
+	}
+	
+	ymaps.ready(init);
 });

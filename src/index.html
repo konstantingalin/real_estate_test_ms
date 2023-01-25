@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="shortcut icon" href="#" />
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-	<!-- <link rel="stylesheet" href="tools/owlcarousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="tools/owlcarousel/owl.theme.default.min.css">
-	<script src="tools/owlcarousel/owl.carousel.min.js"></script> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 	<link rel="stylesheet"
 		href="https://github.com/konstantingalin/real_estate_test_ms/blob/main/src/fonts/Formular/stylesheet.css">
 	<title>Test</title>
@@ -161,14 +161,18 @@
 					Обычный слайдер
 				</h2>
 			</div>
-			<div class="owl-carousel">
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
-				<div> Your Content </div>
+			<div class="section__content2">
+				<div class="owl-carousel">
+					<div><img src="../public/owl_img_1.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_2.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_3.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_1.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_2.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_3.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_1.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_2.png" alt="картинка"></div>
+					<div><img src="../public/owl_img_3.png" alt="картинка"></div>
+				</div>
 			</div>
 		</section>
 		<section class="section _3" id="_3">
@@ -216,7 +220,7 @@
 		<section class="section _4" id="_4">
 			<div class="section__content">
 				<div class="box_map">
-
+					<div id="map-test" class="map"></div>
 				</div>
 				<div class="box_items">
 					<div class="box_items__item">
@@ -286,20 +290,8 @@
 			</div>
 		</footer>
 	</div>
-	<script>
-		// Carousel
-
-	// document.querySelector('.owl-carousel').owlCarousel({
-	// 	center: true,
-	// 	items:2,
-	// 	loop:false,
-	// 	margin:10,
-	// 	responsive:{
-	// 		600:{
-	// 			items:4
-	// 		}
-	// 	}
-	// });
+	
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=2e63ff5c-d8d7-45ac-b806-26f01aa5b7c5&lang=ru_RU">
 	</script>
 </body>
 
