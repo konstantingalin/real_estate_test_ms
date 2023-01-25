@@ -78,15 +78,16 @@ window.addEventListener('DOMContentLoaded', function () {
 	// Carousel
 
 	$('.owl-carousel').owlCarousel({
-		items: 3,
+		items: 1.1,
 		loop:true,
-		margin:30,
+		margin:12,
 		nav:true,
 		navText: "",
 		responsive:{
-			// 600:{
-			// 	items:2.8
-			// }
+			768:{
+				items:3,
+				margin: 30,
+			}
 		}
 	});
 
