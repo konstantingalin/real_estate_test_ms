@@ -582,8 +582,8 @@
   .main_text {
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 55px;
+    font-size: var(--fz48);
+    line-height: var(--fz55);
     text-align: center;
     color: #2C2E3E;
     @include adaptive(margin-bottom, 16, 54);
