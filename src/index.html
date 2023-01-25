@@ -115,20 +115,28 @@
 			<div class="section__content">
 				<div class="main_content">
 					<div class="main_content__left">
-						<p class="main_text">
+						<h1 class="main_text">
 							Недвижимость Санкт-Петербурга и&nbsp;Москвы
-						</p>
+						</h1>
 						<form action="POST" class="form">
 							<div class="form__inputs">
 								<div class="form__inputs__item">
 									<label for="city">Выбрать город</label>
-									<select type="text" placeholder="Выбрать город" id="city">
-										<option value="1">Выбрать город</option>
-										<option>Москва</option>
-										<option>Санкт-Петербург</option>
-										<option>Владивосток</option>
-										<option>Оренбург</option>
-									</select>
+									<div class="__select" data-state="">
+										<div class="__select__title" data-default="Option 0">Выбрать город</div>
+										<div class="__select__content">
+										  <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+										  <label for="singleSelect0" class="__select__label __select__label__done">Выбрать город</label>
+										  <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+										  <label for="singleSelect1" class="__select__label">Москва</label>
+										  <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+										  <label for="singleSelect2" class="__select__label">Санкт-Петербург</label>
+										  <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+										  <label for="singleSelect3" class="__select__label">Владивосток</label>
+										  <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+										  <label for="singleSelect4" class="__select__label">Оренбург</label>
+										</div>
+									</div>
 								</div>
 								<div class="form__inputs__item">
 									<label for="email">Ваш e-mail</label> 
@@ -136,12 +144,22 @@
 								</div>
 							</div>
 							<button class="button">Кнопка действия</button>
+							<div class="form__checkbox">
+								<input type="checkbox" checked id="cb1"> <label for="cb1">Отправляя нам данную форму вы соглашаетесь с <a href="#">политикой конфиденциальности</a></label>
+							</div>
 						</form>
 					</div>
 					<div class="main_content__right">
 						<img src="../public/Illustration_main_screen.png" alt="иллюстрация">
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="section _2" id="_2">
+			<div class="section__content">
+				<h2 class="main_text">
+					Обычный слайдер
+				</h2>
 			</div>
 		</section>
 	</div>
